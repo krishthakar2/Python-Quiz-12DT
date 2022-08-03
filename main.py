@@ -1,7 +1,8 @@
 import time
 
 
-def new_game():  # whenever this function is called a new quiz game will be created
+# This function when it is called will create a new quiz game.
+def new_game():
     answer_tried = []
     correct_guesses = 0
     number_questions = 1  # represents the first questions
@@ -26,6 +27,7 @@ def new_game():  # whenever this function is called a new quiz game will be crea
 score = 0
 
 
+# This function will allow the user to replay the quiz
 def play_again():  # allows the user to play the game again and try get higher score
 
     """
@@ -46,8 +48,10 @@ def play_again():  # allows the user to play the game again and try get higher s
                 "I'm sorry, I didn't understand that. Please try again.")  # is the user writes anything but a yes or no the quiz prints this and asks the user to re enter a answer (yes/no)
 
 
+# checks the answer entered by the user with the correct answer and gives the points and prints the statement
+# This function will compare the answer tried by the user with the real answer which is then passed.
 def check_answer(answer,
-                 answer_tried):  # checks the answer entered by the user with the correct answer and gives the points and prints the statement
+                 answer_tried):
     global score
 
     if answer == answer_tried:  # checks the answer written by user but the real answer
@@ -62,10 +66,11 @@ def check_answer(answer,
 
     #  introduction and start of the questions
 
-    
-def main(name):
 
+# This function will ask for their name and also print what the code will be able then the questions will be played.
+def main(name):
     print("Welcome, ")  # prints a welcome statement when the user starts the game
+
 
 # ask for name and make sure it is not left blank
 name = ""
@@ -110,7 +115,8 @@ new_game()  # calls the new game function
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")  # prints a line to seperate the sections
 
-print("Hi", name, "Your final score is: ", score,"Out of 7")  # prints your name and what your final score is out of the 7 questions
+print("Hi", name, "Your final score is: ", score,
+      "Out of 7")  # prints your name and what your final score is out of the 7 questions
 
 time.sleep(1)  # adds a 1 second stop before the next line is printed
 print("If you would like to better your score, give the quiz another go.")
@@ -128,4 +134,5 @@ print("""
         """)
 print(
     "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
 
