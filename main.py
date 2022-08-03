@@ -27,6 +27,7 @@ score = 0
 
 
 def play_again():  # allows the user to play the game again and try get higher score
+
     """
     Asks the user if they want to play again.
     :return:
@@ -61,8 +62,10 @@ def check_answer(answer,
 
     #  introduction and start of the questions
 
+    
+def main(name):
 
-print("Welcome, ")  # prints a welcome statement when the user starts the game
+    print("Welcome, ")  # prints a welcome statement when the user starts the game
 
 # ask for name and make sure it is not left blank
 name = ""
@@ -70,10 +73,9 @@ while name == "":
     name = input("Please enter your name: ")  # asks for the name
 
     print("Hi", name)  # says hi to the user with the name provided above
-
     # give an error message if the name is left blank
     if name == "":  # if the name is left empty it prints the statement
-        print("Please enter you name - you cannot leave it blank")
+        print("Please enter your name - you cannot leave it blank")
         print("")
 time.sleep(2)  # adds a 2 second stop before the next line is printed
 print("This is a Poverty awareness quiz where you will be able to answer multiple questions")
@@ -84,7 +86,8 @@ time.sleep(5)  # adds a 5 second stop before the next line is printed
 
 time.sleep(1)  # adds a 1 second stop before the next line is printed
 #
-questions = {"Q1. Which country has the highest poverty rate?": 'A',   # key has a question which is being asked with the associated value
+questions = {"Q1. Which country has the highest poverty rate?": 'A',
+             # key has a question which is being asked with the associated value
              "Q2. Which country has the lowest poverty rate?": 'D',
              "Q3. Which racial demographic has the highest likelihood of living in poverty?": 'D',
              "Q4. What age group has the highest poverty rate in the US?": 'B',
@@ -92,7 +95,8 @@ questions = {"Q1. Which country has the highest poverty rate?": 'A',   # key has
              "Q6. Out of 100 people in a village how many people would live on 2$ or less?": 'D',
              "Q7. What is one of the biggest causes of poverty? ": 'A',
              }
-answers = [["A. South Sudan", "B. India ", "C. London  ", "D. United States"],   # 2d list to hold all the possible questions
+# 2d list to hold all the possible questions
+answers = [["A. South Sudan", "B. India ", "C. London  ", "D. United States"],
            ["A. China", "B. India", "C. New Zealand", "D. Iceland"],
            ["A. White", "B. African American", "C. Indian", "D. Native American"],
            ["A. Adults", "B. Children", "C. Elderly", "D. Infant"],
@@ -106,14 +110,14 @@ new_game()  # calls the new game function
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")  # prints a line to seperate the sections
 
-print("Hi", name, "Your final score is: ", score,
-      "Out of 7")  # prints your name and what your final score is out of the 7 questions
+print("Hi", name, "Your final score is: ", score,"Out of 7")  # prints your name and what your final score is out of the 7 questions
 
 time.sleep(1)  # adds a 1 second stop before the next line is printed
 print("If you would like to better your score, give the quiz another go.")
 
 while play_again():  # this will return either true or false
     new_game()  # starts the new game
+    exit()
 
     time.sleep(1)  # adds a 1 second stop before the next line is printed
 print("Hope you enjoyed and now know a little bit more about poverty then before")
@@ -124,3 +128,4 @@ print("""
         """)
 print(
     "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
